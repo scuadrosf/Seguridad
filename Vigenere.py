@@ -30,8 +30,12 @@ def descifrar(cifrado, clave, alfabeto):
 
 
 if __name__ == '__main__':
-    alfabeto = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
-    clave = "Vigenere"
+    print("Introduzca el alfabeto: ", end="")
+    alfabeto = str(input())
+    #abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ
+    print("Introduzca la clave: ", end="")
+    clave = str(input())
+    #Vigenere
 
     print("1.Cifrar")
     print("2.Descifrar")
