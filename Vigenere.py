@@ -20,10 +20,13 @@ def descifrar(cifrado, clave, alfabeto):
         if cifrado[i] in alfabeto:
             x = alfabeto.index(cifrado[i])
             y = alfabeto.index(clave[i % len(clave)])
-            if clave[i % len(clave)].isupper():
+            if cifrado[i % len(clave)].isupper():
                 mensaje += alfabeto[(x - y) % n].upper()
             else:
-                mensaje += alfabeto[(x - y) % n]
+                letra = alfabeto[(x - y) % n]
+                if letra.isupper():
+                    letra = letra.lower()
+                mensaje += letra
         else:
             mensaje += cifrado[i]
     print("Mensaje descrifrado:", mensaje)
@@ -36,7 +39,7 @@ if __name__ == '__main__':
     print("Introduzca la clave: ", end="")
     clave = str(input())
     #Vigenere
-
+    #QqmiaiiiYmisqmwmxijs
     print("1.Cifrar")
     print("2.Descifrar")
     op = int(input())
