@@ -31,7 +31,6 @@ def descifrar(cifrado, clave, alfabeto):
 
 if __name__ == '__main__':
     alfabeto = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
-    #mensaje_cifrado = "QqmiaiiiYmisqmwmxijs"
     clave = "Vigenere"
 
     print("1.Cifrar")
