@@ -30,9 +30,9 @@ def decodificar(codificado, clave, iv):
     desencriptar_relleno_datos = desencriptar.update(codificadoAux) + desencriptar.finalize()
 
     quitar_relleno = PKCS7(algorithms.AES.block_size).unpadder()
-    decrypted_data = quitar_relleno.update(desencriptar_relleno_datos) + quitar_relleno.finalize()
+    decodificacion = quitar_relleno.update(desencriptar_relleno_datos) + quitar_relleno.finalize()
 
-    enString = decrypted_data.decode('utf-8')
+    enString = decodificacion.decode('utf-8')
     print("Mensaje descifrado:", enString)
 
 
