@@ -16,8 +16,8 @@ def codificar(enClaroAux, clave, iv):
     texto_cifrado = encriptar.update(relleno_datos) + encriptar.finalize()
 
     texto_cifrado_hex = binascii.hexlify(texto_cifrado)
-    string_value = texto_cifrado_hex.decode('utf-8')
-    print("Mensaje cifrado:", string_value)
+    enString = texto_cifrado_hex.decode('utf-8')
+    print("Mensaje cifrado:", enString)
 
 
 def decodificar(codificado, clave, iv):
